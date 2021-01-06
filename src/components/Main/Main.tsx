@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import '../../config/i18n';
 import { BottomNavigator } from '../../navigators/BottomNavigator';
 import { darkTheme, lightTheme } from '../../config/theme';
+import { CardView } from './CardView';
 
 export const Main = () => {
   const colorScheme = useColorScheme();
@@ -17,7 +18,7 @@ export const Main = () => {
       <ThemeProvider theme={colorScheme === 'dark' ? darkTheme : lightTheme}>
         <SafeAreaProvider>
           <SafeAreaView style={{ flex: 1 }}>
-            <BottomNavigator />
+            <CardView />
           </SafeAreaView>
         </SafeAreaProvider>
       </ThemeProvider>
