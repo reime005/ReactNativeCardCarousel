@@ -27,6 +27,12 @@ export const CardView = () => {
     <View style={styles.container}>
       <StatusBar animated hidden />
       <View style={{ width: '100%' }}>
+        <Text
+          numberOfLines={3}
+          style={[styles.boxText, { textAlign: 'center', marginBottom: 24 }]}>
+          React Native{'\n'}Card Carousel
+        </Text>
+
         <FlatList
           horizontal
           data={lorem}
@@ -44,7 +50,7 @@ export const CardView = () => {
             left: halfBoxDistance,
             right: halfBoxDistance,
           }}
-          contentOffset={{ x: (halfBoxDistance) * -1, y: 0 }}
+          contentOffset={{ x: halfBoxDistance * -1, y: 0 }}
           onLayout={(e) => {
             setScrollViewWidth(e.nativeEvent.layout.width);
           }}
@@ -99,6 +105,7 @@ export const CardView = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
